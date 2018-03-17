@@ -70,6 +70,7 @@ then, `sudo pip install tensorflow-wheel-file`
 `sudo apt-get install libopenblas-dev`
 `sudo pip install scipy`
 `sudo pip install keras`
+You can use `pip3` instead if `pip` doens't work.
 
 ### (Optional) Running from SD Card
 Once everything's done, there's probably about size of 1GB space would be left on TX1's internal eMMC drive.  
