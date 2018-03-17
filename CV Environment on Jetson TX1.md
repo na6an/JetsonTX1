@@ -18,7 +18,7 @@ It's recommended to flash TX1 with latest Jetpack from Nvidia website.
 [https://developer.nvidia.com/embedded/jetpack](https://developer.nvidia.com/embedded/jetpack)
 See following video for the complete installation process.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DyhRMjaUknQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[https://www.youtube.com/embed/DyhRMjaUknQ](https://www.youtube.com/embed/DyhRMjaUknQ)
 
 Assuming following network option was selected, you might have to log-in in TX1 and setup wifi first before the installer can find the TX1's ip address.
 ![alt text][image1]
