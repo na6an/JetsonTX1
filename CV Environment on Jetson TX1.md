@@ -4,7 +4,7 @@
 ---
 ### Intro
 
-Training Deep Neural Network without GPU could be frustrating. 
+Training Deep Neural Network without GPU could be frustrating.\n
 There is no GPU on my laptop, and price for computers with useful GPU is sky rocketed because crypto-currency mining inflated GPU price. 
 
 AWS EC2 GPU instance is another option but costs about $1 every hour. One day I thought I stopped it but didn't realize until the next day when I found out it wasn't stopped, ended up getting charged more than ten for doing nothing.
@@ -21,6 +21,7 @@ See following video for the complete installation process.
 [https://www.youtube.com/embed/DyhRMjaUknQ](https://www.youtube.com/embed/DyhRMjaUknQ)
 
 Assuming following network option was selected, you might have to log-in in TX1 and setup wifi first before the installer can find the TX1's ip address.
+
 ![alt text][image1]
 
 
