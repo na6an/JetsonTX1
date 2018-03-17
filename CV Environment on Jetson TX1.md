@@ -4,18 +4,18 @@
 ---
 ### Intro
 
-Training Deep Neural Network without GPU could be frustrating.\n
+Training Deep Neural Network without GPU could be frustrating._
 There is no GPU on my laptop, and price for computers with useful GPU is sky rocketed because crypto-currency mining inflated GPU price. 
 
 AWS EC2 GPU instance is another option but costs about $1 every hour. One day I thought I stopped it but didn't realize until the next day when I found out it wasn't stopped, ended up getting charged more than ten for doing nothing.
 
 So, I searched for the best valued option with an affordable physical device, but yet strong GPU power enough to run DNN.
-Then, I found one-time developer discount option on Jetson TX1 from Nvidia for $200. (which normally is around $450~500 on Amazon)
+Then, I found one-time developer discount option on Jetson TX1 from Nvidia for $200. (which normally is around $450~500 on Amazon)_
 [http://www.nvidia.com/object/JetsonTX1DeveloperKitSE.html](http://www.nvidia.com/object/JetsonTX1DeveloperKitSE.html)
 
 ### Install JetPack & Setup
-It's recommended to flash TX1 with latest Jetpack from Nvidia website.
-[https://developer.nvidia.com/embedded/jetpack](https://developer.nvidia.com/embedded/jetpack)
+It's recommended to flash TX1 with latest Jetpack from Nvidia website._
+[https://developer.nvidia.com/embedded/jetpack](https://developer.nvidia.com/embedded/jetpack)_
 See following video for the complete installation process.
 
 [https://www.youtube.com/embed/DyhRMjaUknQ](https://www.youtube.com/embed/DyhRMjaUknQ)
@@ -25,20 +25,20 @@ Assuming following network option was selected, you might have to log-in in TX1 
 ![alt text][image1]
 
 
-The architecture of Jetson devices is aarch64, which is different from other dominant computer architectures like x86-64 or arm64. Because of the arch type and the way L4T on Jetson is setup, `apt-get update/upgrade` could break the system and make you do everything again from beginning.
+The architecture of Jetson devices is aarch64, which is different from other dominant computer architectures like x86-64 or arm64._ Because of the arch type and the way L4T on Jetson is setup, `apt-get update/upgrade` could break the system and make you do everything again from beginning.
 
-To prevent this, type `sudo apt-mark hold xserver-xorg-core` in terminal.
+To prevent this, type `sudo apt-mark hold xserver-xorg-core` in terminal._
 (You can undo this with `sudo apt-mark unhold xserver-xorg-core`)
 
 See this link for detail: [https://elinux.org/Jetson_TK1](https://elinux.org/Jetson_TK1)
 
 ### Install Python and OpenCV
 
-Although OpenCV 3.3 is included in JetPack 3.2 by default, it's somewhat fragile and not detected properly in my case.
-See this link for instruction Python & OpenCV 3.4 installation.
+Although OpenCV 3.3 is included in JetPack 3.2 by default, it's somewhat fragile and not detected properly in my case._
+See this link for instruction Python & OpenCV 3.4 installation._
 [https://jkjung-avt.github.io/opencv3-on-tx2/](https://jkjung-avt.github.io/opencv3-on-tx2/)
 
-We need a minor modification since this article is about OpenCV on TX2, not TX1.
+We need a minor modification since this article is about OpenCV on TX2, not TX1._
 In one of comments (by Aaron) has a quick solution by changing the cuda version number from `cuda-8.0` to `cuda-9.0` like following.
 
 `sudo vim /usr/local/cuda-8.0/include/cuda_gl_interop.h` to 
@@ -61,7 +61,7 @@ libgphoto2
 You may want to repeat any code several times to make sure there wasn't any error.
 
 ### Install Tensorflow, Jupyter and Keras
-Download wheel file from here:
+Download wheel file from here:_
 [https://github.com/jetsonhacks/installTensorFlowJetsonTX/tree/master/TX1](https://github.com/jetsonhacks/installTensorFlowJetsonTX/tree/master/TX1)
 then, `sudo pip install tensorflow-wheel-file'
 
@@ -71,7 +71,7 @@ then, `sudo pip install tensorflow-wheel-file'
 `sudo pip install keras`
 
 ### (Optional) Running from SD Card
-Once everything's done, there's probably about size of 1GB space would be left on TX1's internal eMMC drive.
+Once everything's done, there's probably about size of 1GB space would be left on TX1's internal eMMC drive._
 You might want to migrate OS to external SD card. (or even external HDD or SSD) I havn't tried this yet but is definitely what I'm going to try next. 
 
 [http://www.jetsonhacks.com/2017/01/26/run-jetson-tx1-sd-card/](http://www.jetsonhacks.com/2017/01/26/run-jetson-tx1-sd-card/)
