@@ -10,7 +10,8 @@ There is no GPU on my laptop, and price for computers with useful GPU is sky roc
 AWS EC2 GPU instance is another option but costs about $1 every hour. One day I thought I stopped it but didn't realize until the next day when I found out it wasn't stopped, ended up getting charged more than ten for doing nothing.
 
 So, I searched for the best valued option with an affordable physical device, but yet strong GPU power enough to run DNN.
-Then, I found one-time developer discount option on Jetson TX1 from Nvidia for $200. (which normally is around $450~500 on Amazon)  
+Then, I found one-time developer discount option on Jetson TX1 from Nvidia for $200.  
+(which normally is around $450~500 on Amazon)  
 [http://www.nvidia.com/object/JetsonTX1DeveloperKitSE.html](http://www.nvidia.com/object/JetsonTX1DeveloperKitSE.html)
 
 ### Install JetPack & Setup
