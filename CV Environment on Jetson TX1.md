@@ -16,15 +16,14 @@ Then, I found one-time developer discount option on Jetson TX1 from Nvidia for $
 
 ### Install JetPack & Setup
 It's recommended to flash TX1 with latest Jetpack from Nvidia website.  
-[https://developer.nvidia.com/embedded/jetpack](https://developer.nvidia.com/embedded/jetpack)__
-See following video for the complete installation process.
+[https://developer.nvidia.com/embedded/jetpack](https://developer.nvidia.com/embedded/jetpack)  
 
+See following video for the complete installation process.
 [https://www.youtube.com/embed/DyhRMjaUknQ](https://www.youtube.com/embed/DyhRMjaUknQ)
 
 Assuming following network option was selected, you might have to log-in in TX1 and setup wifi first before the installer can find the TX1's ip address.
 
 ![alt text][image1]
-
 
 The architecture of Jetson devices is aarch64, which is different from other dominant computer architectures like x86-64 or arm64.  Because of the arch type and the way L4T on Jetson is setup, `apt-get update/upgrade` could break the system and make you do everything again from beginning.
 
