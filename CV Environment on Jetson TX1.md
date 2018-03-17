@@ -35,7 +35,7 @@ See this link for detail: [https://elinux.org/Jetson_TK1](https://elinux.org/Jet
 
 ### Install Python and OpenCV
 
-Although OpenCV 3.3 is included in JetPack 3.2 by default, it's somewhat fragile and not detected properly in my case.__
+Although OpenCV 3.3 is included in JetPack 3.2 by default, it's somewhat fragile and not detected properly in my case.  
 See this link for instruction Python & OpenCV 3.4 installation.  
 [https://jkjung-avt.github.io/opencv3-on-tx2/](https://jkjung-avt.github.io/opencv3-on-tx2/)
 
@@ -62,9 +62,9 @@ libgphoto2
 You may want to repeat any code several times to make sure there wasn't any error.
 
 ### Install Tensorflow, Jupyter and Keras
-Download wheel file from here:_
+Download wheel file from here:  
 [https://github.com/jetsonhacks/installTensorFlowJetsonTX/tree/master/TX1](https://github.com/jetsonhacks/installTensorFlowJetsonTX/tree/master/TX1)
-then, `sudo pip install tensorflow-wheel-file'
+then, `sudo pip install tensorflow-wheel-file`
 
 `sudo pip install jupyter`
 `sudo apt-get install libopenblas-dev`
@@ -73,7 +73,8 @@ then, `sudo pip install tensorflow-wheel-file'
 
 ### (Optional) Running from SD Card
 Once everything's done, there's probably about size of 1GB space would be left on TX1's internal eMMC drive.  
-You might want to migrate OS to external SD card. (or even external HDD or SSD) I havn't tried this yet but is definitely what I'm going to try next. 
+You might want to migrate OS to external SD card. (or even external HDD or SSD)  
+I havn't tried this yet but is definitely what I'm going to try next. 
 
 [http://www.jetsonhacks.com/2017/01/26/run-jetson-tx1-sd-card/](http://www.jetsonhacks.com/2017/01/26/run-jetson-tx1-sd-card/)
 
