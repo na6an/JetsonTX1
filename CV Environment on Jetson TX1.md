@@ -25,7 +25,7 @@ Assuming following network option was selected, you might have to log-in in TX1 
 
 ![alt text][image1]
 
-The architecture of Jetson devices is aarch64, which is different from other dominant computer architectures like x86-64 or arm64.  Because of the arch type and the way L4T on Jetson is setup, `apt-get update/upgrade` could break the system and make you do everything again from beginning.
+The architecture of Jetson devices is aarch64, which is different from other dominant computer architectures like x86-64 or arm.  Because of the arch type and the way L4T on Jetson is setup, `apt-get update/upgrade` could break the system and make you do everything again from beginning.
 
 To prevent this, type `sudo apt-mark hold xserver-xorg-core` in terminal.  
 (You can undo this with `sudo apt-mark unhold xserver-xorg-core`)
