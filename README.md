@@ -68,13 +68,12 @@ then, `sudo pip install tensorflow-wheel-file`
 `sudo pip install jupyter`
 `sudo apt-get install libopenblas-dev`
 `sudo pip install scipy`
-`sudo pip install keras`
+`sudo pip install keras`  
 You can use `pip3` instead if `pip` doens't work.
 
 ### (Optional) Running from SD Card
 Once everything's done, there's probably about size of 1GB space would be left on TX1's internal eMMC drive.  
-You might want to migrate OS to external SD card. (or even external HDD or SSD)  
-I havn't tried this yet but is definitely what I'm going to try next. 
+You might want to migrate OS to external SD card. (or even external HDD or SSD)   
 
 [http://www.jetsonhacks.com/2017/01/26/run-jetson-tx1-sd-card/](http://www.jetsonhacks.com/2017/01/26/run-jetson-tx1-sd-card/)
 
