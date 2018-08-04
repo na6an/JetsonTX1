@@ -1,5 +1,5 @@
-## Computer Vision Environment on Jetson TX1
-### Cheap Deep Neural Network Device for $200 (+tax/shipping)
+# JetsonTX1, an affordable way to begin machine learning
+## Cheap Deep Neural Network Device for $200 (+tax/shipping)
 
 ---
 ### Intro
