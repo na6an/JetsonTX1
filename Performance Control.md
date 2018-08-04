@@ -15,11 +15,30 @@ https://elinux.org/Jetson/TX1_Controlling_Performance
 https://elinux.org/Jetson/Performance  
 https://wiki.archlinux.org/index.php/CPU_frequency_scaling  
 
-Unlike popular, commercial-ready OS like Windows, Mac or Ubuntu, L4T 
-
 ## For TX1 with JetPack 3.2
+```
+	# Fan Control #
+# sudo chown -R nvidia:nvidia /sys/kernel/debug/
+echo 120 > /sys/kernel/debug/tegra_fan/target_pwm  
 
+	# Read Temperature #
+cat /sys/devices/virtual/thermal/thermal_zone*/type
+cat /sys/devices/virtual/thermal/thermal_zone*/temp
 
+	# CPU Control #
+# sudo chown -R nvidia:nvidia /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo "Online CPUs: `cat /sys/devices/system/cpu/online`"
+for i in 0 1 2 3 ; do
+	echo 1 > /sys/devices/system/cpu/cpu${i}/online
+done
+echo ondemand > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+
+	# GPU Control #
+cat /sys/kernel/debug/clk/gbus/max > /sys/kernel/debug/clk/override.gbus/rate
+echo 1 > /sys/kernel/debug/clk/override.gbus/state
+echo "GPU: `cat /sys/kernel/debug/clk/gbus/clk_rate`"
+  
+```
 
 ## Balance Between Power, Thermal and Performance
 https://elinux.org/Jetson/Jetson_TK1_Power
