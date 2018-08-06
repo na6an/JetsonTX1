@@ -14,6 +14,7 @@ In which, you have to manually adjust the hardware clock.
 https://elinux.org/Jetson/TX1_Controlling_Performance  
 https://elinux.org/Jetson/Performance  
 https://wiki.archlinux.org/index.php/CPU_frequency_scaling  
+https://androidforums.com/threads/android-cpu-governors-explained.513426/  
 
 ## For TX1 with JetPack 3.2
 Most of code provided in above reference link are outdated because directory structure varies by L4T OS version.  
