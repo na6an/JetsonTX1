@@ -16,10 +16,13 @@ https://elinux.org/Jetson/Performance
 https://wiki.archlinux.org/index.php/CPU_frequency_scaling  
 
 ## For TX1 with JetPack 3.2
+Most of code provided in above reference link are outdated because directory structure varies by L4T OS version.  
+For example, `/sys/kernel/debug/clock` has changed to `/sys/kernel/debug/clk` in L4T 28.2.  
+
 ```
 	# Fan Control #
 # sudo chown -R nvidia:nvidia /sys/kernel/debug/
-echo 120 > /sys/kernel/debug/tegra_fan/target_pwm  
+echo 200 > /sys/kernel/debug/tegra_fan/target_pwm  
 
 	# Read Temperature #
 cat /sys/devices/virtual/thermal/thermal_zone*/type
@@ -31,10 +34,10 @@ echo "Online CPUs: `cat /sys/devices/system/cpu/online`"
 for i in 0 1 2 3 ; do
 	echo 1 > /sys/devices/system/cpu/cpu${i}/online
 done
-echo ondemand > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo interactive > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
 	# GPU Control #
-cat /sys/kernel/debug/clk/gbus/max > /sys/kernel/debug/clk/override.gbus/rate
+cat /sys/kernel/debug/clk/gbus/max > /sys/kernel/debug/clk/override.gbus/clk_rate
 echo 1 > /sys/kernel/debug/clk/override.gbus/state
 echo "GPU: `cat /sys/kernel/debug/clk/gbus/clk_rate`"
   
