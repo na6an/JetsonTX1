@@ -34,7 +34,8 @@ See this link for detail: [https://elinux.org/Jetson_TK1](https://elinux.org/Jet
 
 ### (Optional) Connecting Bluetooth Devices (Wireless Keyboard/Mouse)
 I had trouble connecting a bluetooth keyboard to TX1.  
-Following a method described in this page worked for me: https://devtalk.nvidia.com/default/topic/1028526
+Following a method described in this page worked for me:  
+https://devtalk.nvidia.com/default/topic/1028526
 
 ### (Optional) Running from SD Card
 Once everything's done, there's probably about size of 1GB space would be left on TX1's internal eMMC drive.  
