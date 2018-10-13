@@ -17,3 +17,13 @@ There are several tutorials about connecting lidar on raspberry pi.
 In this project, I'm going to do it on Jetson TX1.
 
 ## Hardware Setting
+There are two ways to do this.  
+One is to use direct wiring to TX1 gpio pins.  
+
+Following is a document with detailed specification of TX1, including information on gpio pins:  
+https://www.jetsonhacks.com/nvidia-jetson-tx1-j21-header-pinout/  
+Here is a quick, easier version:  
+https://developer.nvidia.com/embedded/downloads#?search=board%20design&tx=$product,jetson_tx1
+
+Second is using a lidar controller.  
+There is an online, DIY robotics marketplace where they sell customized lidar controllers specifically for XV lidar.  
