@@ -3,7 +3,7 @@
 ## Background
 Lidar became a famous sensor since the self-driving cars earned popularity.  
 However, it is usually very expensive; Commercial lidars cost thousands.  
-Even some non-commercial, short-distance lidars easily cost hundreds.
+Even some non-commercial, short-distance lidars easily cost hundreds.  
 Because of this pricing, it's not easy for amateur hobbysts and robotists to buy one and play around.
 
 Neato is a company known for its robot vacuums attaching a lidar.  
@@ -27,3 +27,4 @@ https://developer.nvidia.com/embedded/downloads#?search=board%20design&tx=$produ
 
 Second is using a lidar controller.  
 There is an online, DIY robotics marketplace where they sell customized lidar controllers specifically for XV lidar.  
+https://www.getsurreal.com/product/lidar-controller-v2-0/
