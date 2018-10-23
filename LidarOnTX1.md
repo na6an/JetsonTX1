@@ -18,8 +18,8 @@ In this project, I'm going to do it on Jetson TX1.
 
 ## Hardware Setting
 There are two ways to do this.  
-One is to use direct wiring to TX1 gpio pins.  
 
+One is to use direct wiring to TX1 gpio pins.  
 Following is a document with detailed specification of TX1, including information on gpio pins:  
 https://www.jetsonhacks.com/nvidia-jetson-tx1-j21-header-pinout/  
 Here is a quick, easier version:  
@@ -27,4 +27,37 @@ https://developer.nvidia.com/embedded/downloads#?search=board%20design&tx=$produ
 
 Second is using a lidar controller.  
 There is an online, DIY robotics marketplace where they sell customized lidar controllers specifically for XV lidar.  
-https://www.getsurreal.com/product/lidar-controller-v2-0/
+https://www.getsurreal.com/product/lidar-controller-v2-0/ (Teensy)
+
+In this setting, I'm going to discuss second method first.  
+It costs little more for the controller but is relatively easier.  
+
+There is a step-by-step tutorial here:  
+http://roboticsweekends.blogspot.com/2017/12/how-to-connect-neato-xv-11-lidar-to.html
+
+Now, the tutorial above is connecting XV lidar-arduino(lidar controller)-RPi-host computer(running rviz).  
+I'm going to skip RPi and use TX1 instead of host computer.  
+
+1. Download firmware from here:  
+https://github.com/getSurreal/XV_Lidar_Controller  
+Upload it to Teensy controller using Arduino IDE.  
+Before upload the firmware, make sure to install Teensyduino add-on.  
+https://www.pjrc.com/teensy/td_download.html
+
+2. Assuming ROS already installed on TX1, install lidar driver.
+`sudo apt install ros-kinetic-xv-11-laser-driver
+mkdir -p xv-11/src; cd xv-11/src
+git clone https://github.com/rohbotics/xv_11_laser_driver.git
+cd ..; catkin_make`
+
+3. Run ROS and rviz
+`roscore&
+rosrun xv_11_laser_driver neato_laser_publisher _port:=/dev/ttyACM0 _firmware_version:=2
+rviz`
+
+4. Configure rviz
+Add "LaerScan" from Add button, select "/scan" from LaserScan topic, and type "neato_laser" at the fixed frame.
+
+Result:
+![gif](https://media.giphy.com/media/fMzSRAwmRTiRyRNddZ/giphy.gif) 
+
