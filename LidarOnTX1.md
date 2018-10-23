@@ -44,20 +44,26 @@ Upload it to Teensy controller using Arduino IDE.
 Before upload the firmware, make sure to install Teensyduino add-on.  
 https://www.pjrc.com/teensy/td_download.html
 
-2. Assuming ROS already installed on TX1, install lidar driver.
-`sudo apt install ros-kinetic-xv-11-laser-driver
-mkdir -p xv-11/src; cd xv-11/src
-git clone https://github.com/rohbotics/xv_11_laser_driver.git
-cd ..; catkin_make`
+<img src="https://github.com/na6an/JetsonTX1/blob/master/pic/arduino.PNG" alt="alt text" width="400" height="240">
 
-3. Run ROS and rviz
-`roscore&
-rosrun xv_11_laser_driver neato_laser_publisher _port:=/dev/ttyACM0 _firmware_version:=2
-rviz`
+2. Assuming ROS already installed on TX1, install lidar driver.  
+```
+sudo apt install ros-kinetic-xv-11-laser-driver  
+mkdir -p xv-11/src; cd xv-11/src  
+git clone https://github.com/rohbotics/xv_11_laser_driver.git  
+cd ..; catkin_make
+```
 
-4. Configure rviz
+3. Run ROS and rviz  
+```
+roscore&  
+rosrun xv_11_laser_driver neato_laser_publisher _port:=/dev/ttyACM0 _firmware_version:=2  
+rviz
+```
+
+4. Configure rviz  
 Add "LaerScan" from Add button, select "/scan" from LaserScan topic, and type "neato_laser" at the fixed frame.
 
-Result:
-![gif](https://media.giphy.com/media/fMzSRAwmRTiRyRNddZ/giphy.gif) 
+Result:  
+![gif](https://github.com/na6an/JetsonTX1/blob/master/pic/result.gif) 
 
