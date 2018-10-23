@@ -32,6 +32,8 @@ https://www.getsurreal.com/product/lidar-controller-v2-0/ (Teensy)
 In this setting, I'm going to discuss second method first.  
 It costs little more for the controller but is relatively easier.  
 
+## Using a controller
+
 There is a step-by-step tutorial here:  
 http://roboticsweekends.blogspot.com/2017/12/how-to-connect-neato-xv-11-lidar-to.html
 
