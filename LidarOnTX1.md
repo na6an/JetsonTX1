@@ -21,9 +21,11 @@ There are two ways to do this.
 
 One is to use direct wiring to TX1 gpio pins.  
 Following is a document with detailed specification of TX1, including information on gpio pins:  
-https://www.jetsonhacks.com/nvidia-jetson-tx1-j21-header-pinout/  
-Here is a quick, easier version:  
+https://developer.nvidia.com/embedded/downloads#?search=Carrier%20Board%20Specification  
 https://developer.nvidia.com/embedded/downloads#?search=board%20design&tx=$product,jetson_tx1
+
+Here is a quick, easier version:  
+https://www.jetsonhacks.com/nvidia-jetson-tx1-j21-header-pinout/  
 
 Second is using a lidar controller.  
 There is an online, DIY robotics marketplace where they sell customized lidar controllers specifically for XV lidar.  
